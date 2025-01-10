@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="estilo/pg1.css">
+
+	<title>Sesi Bucks - Vendas</title>
+</head>
+
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-coffee-alt'></i>
+			<span class="text">SesiBucks</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="pg1.html">
+					<i class='bx bxs-dashboard'></i>
+					<span class="text">Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="pg2.html">
+					<i class='bx bxs-shopping-bag-alt'></i>
+					<span class="text">Vendas</span>
+				</a>
+			</li>
+			<li>
+				<a href="pg3.html">
+					<i class='bx bxs-doughnut-chart'></i>
+					<span class="text">Meu Estoque</span>
+				</a>
+			</li>
+			<li>
+				<a href="pg4.html">
+					<i class='bx bxs-message-dots'></i>
+					<span class="text">Listagem</span>
+				</a>
+			</li>
+			<li>
+				<a href="pg5.html">
+					<i class='bx bxs-group'></i>
+					<span class="text">Perfil</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="usuarios.html" class="logout">
+					<i class='bx bxs-log-out-circle'></i>
+					<span class="text">Sair</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu'></i>
+			<a href="#" class="nav-link">Categorias</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search..." style="display: none;">
+					<button type="submit" class="search-btn" style="display: none;"><i class='bx bx-search'
+							style="display: none;"></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="profile">
+				<img src="imgs/sesi blocks.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Vendas</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Vendas</a>
+						</li>
+						<li><i class='bx bx-chevron-right'></i></li>
+						<li>
+							<a class="active" href="pg1.html">Home</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<ul class="box-info">
+
+			</ul>
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-calendar-check'></i>
+					<span class="text">
+						<div id="soma-quantidades">Carregando...</div>
+						<p>Quantidade De Produtos</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-group'></i>
+					<span class="text">
+						<div id="ultimo-codigo">Carregando...</div>
+						<p>Clientes Atendidos</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-dollar-circle'></i>
+					<span class="text">
+						<div id="total-vendas">Carregando...</div> <!-- ID para atualizar o total de vendas -->
+						<p>Vendas Totais</p>
+					</span>
+				</li>
+			</ul>
+
+
+			<div class="rounded-box">
+				<div class="head">
+					<h3></h3>
+					<i class='bx bx-search' id="searchbx"></i>
+					<i class='bx bx-filter' id="filterbx"></i>
+				</div>
+				<!-- Formulário para Inserir Vendas -->
+				<h2>Gerenciamento de Vendas</h2>
+				<form id="form-insert-venda">
+					<div class="input-group">
+						<input type="text" name="nomecliente_vendas" placeholder="Nome do Cliente" required>
+						<input type="text" name="pagamento_vendas" placeholder="Método de Pagamento" required>
+					</div>
+					<div class="input-group">
+						<input type="text" name="data_vendas" placeholder="Data e Hora da Venda" required>
+						<input type="number" name="mesa_vendas" placeholder="Número da Mesa" required>
+					</div>
+					<div class="input-group">
+						<input type="text" name="telefone_vendas" placeholder="Telefone do Cliente">
+						<input type="number" name="valortotal_vendas" placeholder="Valor Total" required>
+					</div>
+					<div class="button-group">
+						<button type="submit" class="btn-insert">Inserir Venda</button>
+						<button type="button" class="btn-update">Atualizar</button>
+						<button type="button" class="btn-delete">Deletar</button>
+						<button type="button" class="btn-cancel">Cancelar</button>
+					</div>
+					<div id="resultado-da-venda"></div>
+					<div id="resultado-update" style="color: #fbfbfbd5;"></div>
+					<div id="resultado-delete"></div>
+				</form>
+			</div>
+			<div class="rounded-box">
+				<div id="resultado-insert-venda">
+					<div class="container1">
+						<table>
+							<thead id="table-header"></thead>
+							<tbody id="table-body"></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+
+
+
+	<script type="text/javascript" src="scripts/script.js"></script><!--Funcões para as rotas funcionarem-->
+</body>
+
+</html>

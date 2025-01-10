@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="estilo/pg1.css">
+
+	<title>Sesi Bucks - Estoque</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-coffee-alt'></i>
+			<span class="text">SesiBucks</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="pg1.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="pg2.html">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Vendas</span>
+				</a>
+			</li>
+			<li>
+				<a href="pg3.html">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Meu Estoque</span>
+				</a>
+			</li>
+			<li>
+				<a href="pg4.html">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Listagem</span>
+				</a>
+			</li>
+			<li>
+				<a href="pg5.html">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Perfil</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="usuarios.html" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Sair</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categorias</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search..." style="display: none;">
+					<button type="submit" class="search-btn" style="display: none;"><i class='bx bx-search' style="display: none;"></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="profile">
+				<img src="imgs/sesi blocks.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Meu Estoque</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Estoque</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="pg1.html">Home</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<ul class="box-info">
+
+			</ul>
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-calendar-check' ></i>
+					<span class="text">
+						<div id="soma-quantidades">Carregando...</div>
+						<p>Quantidade De Produtos</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-group' ></i>
+					<span class="text">
+						<div id="ultimo-codigo">Carregando...</div>
+						<p>Clientes Atendidos</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-dollar-circle'></i>
+					<span class="text">
+						<div id="total-vendas">Carregando...</div> <!-- ID para atualizar o total de vendas -->
+						<p>Vendas Totais</p>
+					</span>
+				</li>			
+			</ul>
+
+
+			<div class="rounded-box">
+				<div class="head">
+					<h3></h3>
+					<i class='bx bx-search'></i>
+					<i class='bx bx-filter'></i>
+				</div>
+				<h2 id="titulo-inserir">Inserir Produto</h2>
+				<h2 id="titulo-atualizar" style="display: none;">Atualizar Produto</h2>
+				<h2 id="titulo-deletar" style="display: none;">Deletar Produto</h2>
+
+				<!-- Formulário de Inserção -->
+				<form id="form-insert">
+					<div class="input-single">
+						<input type="text" name="nome_produtos" placeholder="Nome do Produto" required>
+					</div>
+					<div class="input-group">
+						<input type="number" name="valor_produtos" placeholder="Valor do Produto" required>
+						<input type="text" name="tipo_produtos" placeholder="Tipo do Produto" required>
+					</div>
+					<div class="input-group">
+						<input type="number" name="qtd_produtos" placeholder="Quantidade" required>
+						<input type="text" name="tamanho_produtos" placeholder="Tamanho" required>
+					</div>
+					<div class="input-single">
+						<input type="text" name="descrição_produtos" placeholder="Descrição" required>
+					</div>
+					<button type="submit" class="butao">Inserir</button>
+				</form>
+				<div id="resultado-insert"></div>
+
+				<!-- Formulário para Atualizar Produtos -->
+				<form id="form-update" style="display: none;">
+					<div class="input-single">
+						<input type="number" name="codigo_produtos" placeholder="Código do Produto" required>
+					</div>
+					<div class="input-single">
+						<input type="text" name="nome_produtos" placeholder="Novo Nome do Produto" required>
+					</div>
+					<div class="input-group">
+						<input type="number" name="valor_produtos" placeholder="Novo Valor" required>
+						<input type="text" name="tipo_produtos" placeholder="Novo Tipo" required>
+					</div>
+					<div class="input-group">
+						<input type="number" name="qtd_produtos" placeholder="Nova Quantidade" required>
+						<input type="text" name="tamanho_produtos" placeholder="Novo Tamanho" required>
+					</div>
+					<div class="input-single">
+						<input type="text" name="descrição_produtos" placeholder="Nova Descrição" required>
+					</div>
+					<button type="submit" class="butao">Atualizar</button>
+					<button class="btn-cancel" id="btn-cancelar">Cancelar</button>
+				</form>
+				<div id="resultado-update"></div>
+
+				<!-- Formulário para Deletar Produtos -->
+				<form id="form-delete" style="display: none;">
+					<div class="input-single">
+						<input type="number" name="codigo_produtos" placeholder="Código do Produto" required>
+					</div>
+					<button type="submit" class="butao">Deletar</button>
+					<button class="btn-cancel" id="btn-cancelar">Cancelar</button>
+				</form>
+				<div id="resultado-delete"></div>
+
+				<!-- Menu de Navegação e Botões -->
+				<h2>Menu de Navegação</h2>
+				<div class="button-group">
+					<button class="btn-insert" id="btn-insert-produto">Inserir Produto</button>
+					<button class="btn-update" id="btn-update-produto">Atualizar Produto</button>
+					<button class="btn-delete" id="btn-delete-produto">Deletar Produto</button>
+				</div>
+			</div>	
+			<div class="rounded-box">
+				<i class='bx bx-lock-open-alt' style="display: none;"></i>
+				<button id="toggle-table" class="btn-insert"><i class='bx bx-lock-open-alt'></i>Abrir e Fechar</button>
+				<div id="resultado-insert-venda">
+					<div class="container1">
+						<table>
+							<thead id="table-header"></thead>
+							<tbody id="table-body"></tbody>
+						</table>
+					</div>
+				</div>
+			</div>	
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+
+	<script type="text/javascript" src="scripts/script3.js"></script>
+</body>
+</html>

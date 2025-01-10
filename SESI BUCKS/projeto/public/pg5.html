@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="estilo/pg1.css">
+
+	<title>Sesi Bucks - Perfil</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-coffee-alt'></i>
+			<span class="text">SesiBucks</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="pg1.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="pg2.html">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Vendas</span>
+				</a>
+			</li>
+			<li>
+				<a href="pg3.html">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Meu Estoque</span>
+				</a>
+			</li>
+			<li>
+				<a href="pg4.html">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Listagem</span>
+				</a>
+			</li>
+			<li>
+				<a href="pg5.html">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Perfil</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="usuarios.html" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Sair</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categorias</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search..." style="display: none;">
+					<button type="submit" class="search-btn" style="display: none;"><i class='bx bx-search' style="display: none;"></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="profile">
+				<img src="imgs/sesi blocks.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Perfil</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Perfil</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="pg1.html">Home</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<ul class="box-info">
+
+			</ul>
+			<div class="perfil-container">
+				<div id="controlePerfil" class="caixa-perfil">
+					<span class="caixa-titulo">Controle de Perfil</span>
+					<div id="perfilOpcoes" class="perfil-opcoes" style="display: none;">
+						<button id="adicionarPerfil" class="perfil-btn perfil-btn-adicionar">Adicionar Perfil</button>
+						<button id="modificarPerfilButton" class="perfil-btn perfil-btn-modificar">Modificar Perfil</button>
+						<button id="excluirPerfil" class="perfil-btn perfil-btn-excluir">Excluir Perfil</button>
+					</div>
+				</div>
+				<!-- Conteúdo Expansível: Botões de Controle de Perfil -->
+			</div>	
+			<div id="insertProfileModal" class="modal">
+				<div class="modal-content">
+					<span class="close-btn" onclick="closeModal()">&times;</span>
+					<h2>Inserir Usuario</h2>
+					<form id="insertProfileForm">
+						<label for="usuario">Usuário:</label>
+						<input type="text" id="usuario" name="usuario" required>
+						
+						<label for="senha">Senha:</label>
+						<input type="password" id="senha" name="senha" required>
+						
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" required>
+						
+						<label for="cargo">Cargo:</label>
+						<select id="cargo" name="cargo">
+							<option value="Gerente">Gerente</option>
+							<option value="Chefe de Cozinha">Chefe de Cozinha</option>
+							<option value="Atendente">Atendente</option>
+							<option value="Garçom">Garçom</option>
+						</select>
+						
+						<label for="turno">Turno:</label>
+						<select id="turno" name="turno">
+							<option value="Matutino">Matutino</option>
+							<option value="Vespertino">Vespertino</option>
+							<option value="Noturno">Noturno</option>
+						</select>
+						
+						<label for="salario">Salário:</label>
+						<input type="text" id="salario" name="salario" required>
+						
+						<button type="submit" class="submit-btn">Inserir</button>
+					</form>
+				</div>
+			</div>
+			<div id="updateProfileModal" class="modal">
+				<div class="modal-content">
+					<span class="close-btn" onclick="closeModal()">&times;</span>
+					<h2>Atualizar Perfil</h2>
+					<form id="updateProfileForm">
+						<label for="codigo">Código:</label>
+						<input type="text" id="codigo" name="codigo" required>
+						
+						<label for="usuario">Usuário:</label>
+						<input type="text" id="usuario" name="usuario" required>
+						
+						<label for="senha">Senha:</label>
+						<input type="password" id="senha" name="senha" required>
+						
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" required>
+						
+						<label for="cargo">Cargo:</label>
+						<select id="cargo" name="cargo">
+							<option value="Gerente">Gerente</option>
+							<option value="Chefe de Cozinha">Chefe de Cozinha</option>
+							<option value="Atendente">Atendente</option>
+							<option value="Garçom">Garçom</option>
+						</select>
+						
+						<label for="turno">Turno:</label>
+						<select id="turno" name="turno">
+							<option value="Matutino">Matutino</option>
+							<option value="Vespertino">Vespertino</option>
+							<option value="Noturno">Noturno</option>
+						</select>
+						
+						<label for="salario">Salário:</label>
+						<input type="text" id="salario" name="salario" required>
+						
+						<button type="submit" class="submit-btn">Atualizar</button>
+					</form>
+				</div>
+			</div>		
+			<div id="deleteProfileModal" class="modal">
+				<div class="modal-content">
+					<span class="close-btn" onclick="closeModal()">&times;</span>
+					<h2>Excluir Perfil</h2>
+					<form id="deleteProfileForm">
+						<label for="codigo">Código:</label>
+						<input type="text" id="codigo" name="codigo" required>
+						<button type="submit" class="submit-btn">Excluir</button>
+					</form>
+				</div>
+			</div>
+			<div class="rounded-box1">
+				<button id="toggle-table" class="btn-insert">Abrir e Fechar</button>
+				<div id="resultado-insert-venda">
+					<div class="container1" id="user-cards-container" style="display: none;">
+						<!-- Os cartões de usuário serão inseridos aqui dinamicamente -->
+					</div>
+				</div>
+			</div>
+			<img src="" alt="">					
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+
+	<script type="text/javascript" src="scripts/script5.js"></script>
+</body>
+</html>

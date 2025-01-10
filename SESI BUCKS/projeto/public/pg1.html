@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="estilo/pg1.css">
+
+	<title>Sesi Bucks - Home</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-coffee-alt'></i>
+			<span class="text">SesiBucks</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="pg1.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="pg2.html">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Vendas</span>
+				</a>
+			</li>
+			<li>
+				<a href="pg3.html">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Meu Estoque</span>
+				</a>
+			</li>
+			<li>
+				<a href="pg4.html">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Listagem</span>
+				</a>
+			</li>
+			<li>
+				<a href="pg5.html">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Perfil</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="usuarios.html" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Sair</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categorias</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search..." style="display: none;">
+					<button type="submit" class="search-btn" style="display: none;"><i class='bx bx-search' style="display: none;"></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="profile">
+				<img src="imgs/sesi blocks.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Início</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Início</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="pg1.html">Home</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<ul class="box-info">
+
+			</ul>
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-calendar-check' ></i>
+					<span class="text">
+						<div id="soma-quantidades">Carregando...</div>
+						<p>Quantidade De Produtos</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-group' ></i>
+					<span class="text">
+						<div id="ultimo-codigo">Carregando...</div>
+						<p>Clientes Atendidos</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-dollar-circle'></i>
+					<span class="text">
+						<div id="total-vendas">Carregando...</div> <!-- ID para atualizar o total de vendas -->
+						<p>Vendas Totais</p>
+					</span>
+				</li>			
+			</ul>
+
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Seu Sistema Gerencial</h3>
+						<i class='bx bx-search' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<div class="text-head">
+						<p class="text-group">
+							Olá, nós somos a Sesi Bucks, seu sistema gerencial voltado para cafeterias. Surgimos dentro da instituição SESI SENAI como parte de um trabalho de conclusão de curso. Nosso objetivo é ser um sistema de fácil utilização e entendimento, auxiliando no dia a dia da sua empresa.
+						</p>
+						<br>
+						<p class="text-group">
+							Ao lado, segue uma explicação sobre o que cada página faz ou permite fazer. Em caso de bugs, entre em contato diretamente com os desenvolvedores do sistema. Resolveremos seu problema o mais rápido possível.
+						</p>
+						<br>
+						<p class="text-group">
+							<strong>Instruções para utilizar a página:</strong> 
+							1. Sempre que adicionar uma venda, atualize a página (pressionando F5) para visualizar o valor correto e o número de clientes atendidos. 
+							<br>
+							2. Tenha cuidado ao deletar itens, pois, após a exclusão, não será possível recuperá-los, a menos que sejam adicionados novamente.
+						</p>						
+					</div>
+				</div>
+				<div class="todo">
+					<div class="head">
+						<h3>Sessões</h3>
+						<i class='bx bx-plus' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<ul class="todo-list">
+						<li class="completed">
+							<p>Home: Página inicial com informações sobre o uso da plataforma.</p>
+							<i class='bx bx-dots-vertical-rounded'></i>
+						</li>
+						<li class="completed">
+							<p>Vendas: Página para registrar as vendas no sistema.</p>
+							<i class='bx bx-dots-vertical-rounded'></i>
+						</li>
+						<li class="completed">
+							<p>Meu Estoque: Página para adicionar itens ao estoque e realizar seu controle.</p>
+							<i class='bx bx-dots-vertical-rounded'></i>
+						</li>
+						<li class="completed">
+							<p>Histórico: Página onde é possível listar as vendas realizadas.</p>
+							<i class='bx bx-dots-vertical-rounded'></i>
+						</li>
+						<li class="completed">
+							<p>Perfil: Página para gerenciar e controlar informações dos funcionários.</p>
+							<i class='bx bx-dots-vertical-rounded'></i>
+						</li>						
+					</ul>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	<script type="text/javascript" src="scripts/script1.js"></script>
+</body>
+</html>
